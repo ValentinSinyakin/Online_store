@@ -1,0 +1,125 @@
+@import '../node_modules/nouislider/dist/nouislider.min.css';
+
+body {
+    color: #fff;
+    background: #a99bad;
+    font-family: sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 15px 100px;
+}
+
+header h1 {
+    font-size: 44px;
+    font-weight: 800;
+    color: aqua;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .copyright {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+footer .copyright a {
+    color: rgb(0, 0, 0);
+}
+footer .copyright a:hover {
+    color: #555;
+}
+footer .copyright:before {
+    content: '©';
+}
+
+
+.footer_conteiner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.student_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.http_element {
+    color: black;
+    font-size: 16px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.http_element:hover {
+    color: rgb(8, 107, 114);
+}
+
+.filtres_pricec {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* -----------------slider------------ */
+.noUi-target{
+    background-color: rgb(126, 0, 0);
+    border:none;
+    border-radius: 100px;
+    box-shadow: none;
+    height: 3px;
+}
+
+.noUi-connect {
+    background-color: rgb(226, 109, 109);
+}
+.noUi-handle::after,
+.noUi-handle::before {
+    display:none;
+}
+
+.noUi-handle {
+    box-shadow: none;
+    border-radius: 100%;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgb(226, 109, 109);
+    top: -9px;
+}
+/* -----------------card------------------------- */
+.card {
+    display: flex;
+    
+}
+
+.products_container {
+    max-width: 1024px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 10px;
+}
+
+.products_card{
+    background-color: rgb(250, 209, 255);
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+
+}
