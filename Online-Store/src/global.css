@@ -114,7 +114,7 @@ footer .copyright:before {
 }
 
 .products_card{
-    background-color: rgb(250, 209, 255);
+    background-color: rgb(245, 218, 250);
     border-radius: 5px;
     width: 300px;
     display: flex;
@@ -142,6 +142,6 @@ footer .copyright:before {
 
 
 .products-element__btn_active {
-	border: 1px solid transparent;
-	background-image: var(--linear-gradient);
+	border: 3px solid transparent;
+	background-image: rgb(212, 148, 148);
 }
