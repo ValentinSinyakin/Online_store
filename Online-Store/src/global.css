@@ -114,12 +114,34 @@ footer .copyright:before {
 }
 
 .products_card{
-    background-color: rgb(250, 209, 255);
+    background-color: rgb(245, 218, 250);
     border-radius: 5px;
     width: 300px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
+    gap: 5px;
+    padding: 5px 5px;
 
+}
+.products-element__btn {
+    max-width: 150px;
+	border: 1px solid transparent;
+    border-radius: 12px;
+	background-color:rgb(182, 247, 173) ;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.products-element__btn:hover {
+    
+	background-color:rgb(247, 217, 173) ;
+   
+}
+
+
+.products-element__btn_active {
+	border: 3px solid transparent;
+	background-image: rgb(212, 148, 148);
 }
