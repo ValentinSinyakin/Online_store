@@ -145,3 +145,56 @@ footer .copyright:before {
 	border: 3px solid transparent;
 	background-image: rgb(212, 148, 148);
 }
+
+/* --------------------------filtres---------- */
+
+.filtres_color{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.filtres_color_block{
+width: 20px;
+height: 20px;
+border: 1px solid silver;
+cursor: pointer;
+}
+
+.color_red {
+background-color: red;
+}
+.color_blye {
+    background-color: blue;
+}
+.color_white{
+    background-color: white;
+}
+.color_yellow{
+    background-color: yellow;
+}
+
+.filtres_size{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filtres_size_block{
+    width: 70px;
+    height: 20px;
+    border: 1px solid silver;
+    cursor: pointer;
+    background-color: #d1b1da;
+    }
+.filtres_type{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    }
+    .filtres_type_block{
+        width: 70px;
+        height: 20px;
+        border: 1px solid silver;
+        cursor: pointer;
+        background-color: #b1d9da;
+    }
