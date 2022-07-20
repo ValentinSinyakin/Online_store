@@ -14,8 +14,15 @@ const baseConfig = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
+                test: /.tsx?$/,
+                use: [
+                    {
+                      loader: 'ts-loader',
+                      options: {
+                        transpileOnly: true,
+                      }
+                    }
+                  ]
             },
         ],
     },
@@ -42,3 +49,5 @@ module.exports = ({ mode }) => {
 
     return merge(baseConfig, envConfig);
 };
+
+   
