@@ -1,0 +1,306 @@
+@import '../node_modules/nouislider/dist/nouislider.min.css';
+
+
+body {
+    color: rgb(54, 54, 54);
+    background: #a99bad;
+    font-family: sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 15px 100px;
+}
+
+header h1 {
+    font-size: 44px;
+    font-weight: 800;
+    color: aqua;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .copyright {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+footer .copyright a {
+    color: rgb(0, 0, 0);
+}
+footer .copyright a:hover {
+    color: #555;
+}
+footer .copyright:before {
+    content: '©';
+}
+
+
+.footer_conteiner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.student_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.http_element {
+    color: black;
+    font-size: 16px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.http_element:hover {
+    color: rgb(8, 107, 114);
+}
+
+.filtres_pricec {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+/* ------------------------header------------- */
+.header_title {
+    font-size: 36px;
+}
+.conteiner {
+
+}
+/* -----------------slider------------ */
+.noUi-target{
+    background-color: rgb(126, 0, 0);
+    border:none;
+    border-radius: 100px;
+    box-shadow: none;
+    height: 3px;
+}
+
+.noUi-connect {
+    background-color: rgb(226, 109, 109);
+}
+.noUi-handle::after,
+.noUi-handle::before {
+    display:none;
+}
+
+.noUi-handle {
+    box-shadow: none;
+    border-radius: 100%;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgb(226, 109, 109);
+    top: -9px;
+}
+/* -----------------card------------------------- */
+.card {
+    display: flex;
+    
+}
+
+.products_container {
+    max-width: 1280px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 10px;
+}
+
+.products_card{
+    background-color: rgb(245, 218, 250);
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px 5px;
+
+}
+.products-element__btn {
+    max-width: 150px;
+	border: 1px solid transparent;
+    border-radius: 12px;
+	background-color:rgb(182, 247, 173) ;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.products-element__btn:hover {
+    
+	background-color:rgb(247, 217, 173) ;
+   
+}
+
+
+.products-element__btn_active {
+	border: 3px solid transparent;
+	background-color: rgb(212, 148, 148);
+}
+
+/* --------------------------filtres---------- */
+
+.filtres_color{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.filtres_color_block{
+width: 25px;
+height: 25px;
+border: 1px solid rgb(71, 65, 7);
+border-radius: 100%;
+cursor: pointer;
+transition: 0.3s;
+}
+.filtres_color_block:hover{
+    border: 3px solid black;
+}
+
+.color_red {
+background-color: red;
+}
+.color_blye {
+    background-color: blue;
+}
+.color_white{
+    background-color: white;
+}
+.color_green{
+    background-color: green;
+}
+.all_collor {
+    width: 100px;
+    height: 40px;
+    border-radius: 0%;
+    background-color: rgb(6, 168, 168);
+}
+
+
+.filtres_size{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtres_size_block{
+    width: 100px;
+    height: 40px;
+    border: 1px solid silver;
+    cursor: pointer;
+    background-color: #d1b1da;
+    transition: 0.3s;
+    }
+    .filtres_size_block:hover{
+        border: 3px solid black;
+        background-color: #d48be9;
+    }
+.filtres_type{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    .filtres_type_block{
+        width: 100px;
+        height: 40px;
+        border: 1px solid silver;
+        cursor: pointer;
+        background-color: #b1d9da;
+        transition: 0.3s;
+    }
+    .filtres_type_block:hover{
+        border: 3px solid black;
+        background-color: #1e8688;
+    }
+  /*   ----------header------------- */
+  /* .Container_header_nav{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    
+  } */
+
+  .header_container {
+    display: flex;
+    height: 50px;
+    padding: 15px;
+    gap: 100px;
+    justify-content: space-between;
+
+   
+  }
+
+  .header_counter {
+    display: flex;
+        margin-left: auto ;
+        font-weight: bold;
+        cursor: pointer;
+  }
+
+ /*  ------------------поиск----------------------- */
+
+
+.search-box {
+	display: flex;
+	background-color: #2f3640;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+
+}
+
+.search-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f0f0f0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #2f3640;
+	text-decoration: none;
+}
+
+.search-txt {
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+	transition: .4s;
+	line-height: 40px;
+	width: 0;
+}
+
+.search-box:hover .search-txt {
+	width: 240px;
+	padding: 0 6px;
+}
+
+.search-box:hover .search-btn {
+	background-color: #2b2b2b;
+}
+
+@media (max-width: 1279px) {
+    body {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+}
