@@ -133,7 +133,7 @@ class Products {
     const {pushProduct,products} = localStorageUtil.putProducts(num);
 
     if (pushProduct) {
-        element.class.add(this.classNameActive);
+        element.classList.add(this.classNameActive);
         element.innerHTML = this.labelRemove;
     } else {
         element.classList.remove(this.classNameActive);
@@ -181,4 +181,5 @@ class Products {
     }
 }
 const productsPage = new Products();
+window.productsPage = productsPage;
 productsPage.render();
