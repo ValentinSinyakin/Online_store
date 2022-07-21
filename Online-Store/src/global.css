@@ -143,7 +143,7 @@ footer .copyright:before {
 
 .products-element__btn_active {
 	border: 3px solid transparent;
-	background-image: rgb(212, 148, 148);
+	background-color: rgb(212, 148, 148);
 }
 
 /* --------------------------filtres---------- */

@@ -1,6 +1,7 @@
 import * as noUiSlider from 'nouislider';
 import './global.css';
 import data from './data'
+import { setTheme } from 'colors';
 
 
 
@@ -78,59 +79,7 @@ slider2.noUiSlider.on('update', function(values: number, handle: number){
 }
 
 
-/* ----------------------карточки---------------- */
 
-const ROOT_PRODUCTS=document.getElementById('card');
-class Products {
- /*  constructor() {
-    this.classNameActive = 'products-element__btn_active';
-    this.labelAdd = 'Добавить в корзину';
-    this.labelRemove = 'Удалить из корзины';
-}
-
-handlerSetLocatStorage(element, id) {
-    const { pushProduct, products } = localStorageUtil.putProducts(id);
-
-    if (pushProduct) {
-        element.classList.add(this.classNameActive);
-        element.innerText = this.labelRemove;
-    } else {
-        element.classList.remove(this.classNameActive);
-        element.innerText = this.labelAdd;
-    }
-
-    headerPage.render(products.length);
-} */
-
-    render() {
-        let htmlCatalog = '';
-        data.forEach(({num, name, count, year, shape, color, size, favorite}) => {
-
-         htmlCatalog += `<li class = "products_card">
-            <span class = "">${num}</span>
-            <span >${name}</span>
-            <span>${count}</span>
-            <span>${year}</span>
-            <span>${shape}</span>
-            <span>${color}</span>
-            <span>${size}</span>
-            <span>${favorite}</span>
-            <button class = "products-element__btn">Добавить в корзину</button>
-                        </li> `;
-
-
-        })
-        const html = `
-        <ul class = "products_container">
-        ${htmlCatalog}
-        </ul>
-        `;
-
-        ROOT_PRODUCTS.innerHTML = html;
-    }
-}
-const productsPage = new Products();
-productsPage.render();
 
 /* ----------------------------Активные кнопки для карточек--------------------------------- */
 
@@ -151,7 +100,7 @@ class LocalStorageUtil {
         return [];
     }
 
-    putProducts(num) {
+    putProducts(num: string) {
         let products = this.getProducts();
         let pushProduct = false;
         const index = products.indexOf(num);
@@ -169,5 +118,67 @@ class LocalStorageUtil {
     }
 }
 const localStorageUtil = new LocalStorageUtil();
-localStorageUtil.putProducts('1');
-localStorageUtil.putProducts('2');
+
+/* ----------------------карточки---------------- */
+
+const ROOT_PRODUCTS=document.getElementById('card');
+class Products {
+   constructor() {
+    this.classNameActive = 'products-element__btn_active';
+    this.labelAdd = 'Добавить в корзину';
+    this.labelRemove = 'Удалить из карзины';
+   }
+   
+  handleSetlocationStorage(element, num) {
+    const {pushProduct,products} = localStorageUtil.putProducts(num);
+
+    if (pushProduct) {
+        element.class.add(this.classNameActive);
+        element.innerHTML = this.labelRemove;
+    } else {
+        element.classList.remove(this.classNameActive);
+        element.innerHTML = this.labelRemove;
+    }
+  }
+
+    render() {
+        const productsStore = localStorageUtil.getProducts();
+        let htmlCatalog = '';
+        data.forEach(({num, name, count, year, shape, color, size, favorite}) => {
+            let activClass = '';
+            let activeText = '';
+
+            if (productsStore.indexOf(num) === -1) {
+                activeText = this.labelAdd;
+            } else {
+                activClass = ' ' + this.classNameActive;
+                activeText = this.labelRemove;
+            }
+
+         htmlCatalog += `<li class = "products_card">
+            <span class = "">${num}</span>
+            <span >${name}</span>
+            <span>${count}</span>
+            <span>${year}</span>
+            <span>${shape}</span>
+            <span>${color}</span>
+            <span>${size}</span>
+            <span>${favorite}</span>
+            <button class = "products-element__btn${activClass}" onclick="productsPage.handleSetlocationStorage(this, '${num}');">
+            ${activeText}
+            </button>
+                        </li> `;
+
+
+        })
+        const html = `
+        <ul class = "products_container">
+        ${htmlCatalog}
+        </ul>
+        `;
+
+        ROOT_PRODUCTS.innerHTML = html;
+    }
+}
+const productsPage = new Products();
+productsPage.render();
