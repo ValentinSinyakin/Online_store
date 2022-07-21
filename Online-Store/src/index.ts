@@ -100,7 +100,7 @@ class LocalStorageUtil {
         return [];
     }
 
-    putProducts(num: string) {
+    putProducts(num) {
         let products = this.getProducts();
         let pushProduct = false;
         const index = products.indexOf(num);
@@ -113,7 +113,7 @@ class LocalStorageUtil {
         }
         products.push(num);
         localStorage.setItem(this.KeyName, JSON.stringify(products));
-        return {pushProduct,products}
+        return {pushProduct, products}
 
     }
 }
@@ -122,6 +122,7 @@ const localStorageUtil = new LocalStorageUtil();
 /* ----------------------карточки---------------- */
 
 const ROOT_PRODUCTS=document.getElementById('card');
+const ROOT_HEADER=document.getElementById('header');
 class Products {
    constructor() {
     this.classNameActive = 'products-element__btn_active';
@@ -137,8 +138,9 @@ class Products {
         element.innerHTML = this.labelRemove;
     } else {
         element.classList.remove(this.classNameActive);
-        element.innerHTML = this.labelRemove;
+        element.innerHTML = this.labelAdd;
     }
+    headerPage.render(products.length);
   }
 
     render() {
@@ -183,3 +185,21 @@ class Products {
 const productsPage = new Products();
 window.productsPage = productsPage;
 productsPage.render();
+
+/* ----------------------------------------corzina-------------------------- */
+class Header {
+    render(count) {
+        const html = `
+        <div classs = "header_container">
+            <div class = "header_counter">
+             Корзина💼: ${count} шт
+            </div>
+        </div>
+        `;
+        ROOT_HEADER.innerHTML = html;
+    }
+}
+const headerPage = new Header();
+const productsStore = localStorageUtil.getProducts();
+window.headerPage = headerPage;
+headerPage.render(productsStore.length);

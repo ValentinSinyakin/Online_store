@@ -198,3 +198,17 @@ background-color: red;
         cursor: pointer;
         background-color: #b1d9da;
     }
+
+  /*   ----------header------------- */
+  .header_container {
+    display: flex;
+    height: 50px;
+    padding: 15px;
+    background-color: rgb(202, 201, 201);
+  }
+
+  .header_counter {
+        margin-left: auto ;
+        font-weight: bold;
+        cursor: pointer;
+  }
