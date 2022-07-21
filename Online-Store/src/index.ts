@@ -292,7 +292,7 @@ function getItemsSize(className) {
     })
 }
 
-/* ----------------------фильтр по типу--------------------------- */
+/* --------------------фильтр по типу------------------------- */
 
 const listType = document.querySelector('.filtres_type');
 
