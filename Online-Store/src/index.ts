@@ -111,7 +111,7 @@ class LocalStorageUtil {
         } else {
             products.splice(index, 1);
         }
-        
+    
         localStorage.setItem(this.KeyName, JSON.stringify(products));
         return {pushProduct, products}
 
@@ -157,15 +157,15 @@ class Products {
                 activeText = this.labelRemove;
             }
 
-         htmlCatalog += `<li class = "products_card">
-            <span class = "">${num}</span>
+         htmlCatalog += `<li class = "products_card ${color} ${size} ${shape}">
+            
             <span >${name}</span>
-            <span>${count}</span>
+            <span>на складе:${count}</span>
             <span>${year}</span>
             <span>${shape}</span>
-            <span>${color}</span>
+            
             <span>${size}</span>
-            <span>${favorite}</span>
+            
             <button class = "products-element__btn${activClass}" onclick="productsPage.handleSetlocationStorage(this, '${num}');">
             ${activeText}
             </button>
@@ -208,3 +208,125 @@ const headerPage = new Header();
 const productsStore = localStorageUtil.getProducts();
 window.headerPage = headerPage;
 headerPage.render(productsStore.length);
+
+
+/* ---------------------------фильтр по цветам---------------------------- */
+
+const list = document.querySelector('.filtres_color');
+const items = document.querySelectorAll('.products_card');
+
+function filter() {
+    list.addEventListener('click', event =>{
+        const targetId = event.target.dataset.id
+        console.log(targetId);
+
+        switch(targetId) {
+            case 'красный':
+            getItems(targetId)
+                break
+
+            case 'синий':
+                getItems(targetId)
+                    break
+
+                case 'белый':
+                    getItems(targetId)
+                    break
+
+                    case 'зелёный':
+                        getItems(targetId)
+                    break
+                    
+        }
+    } )
+}
+filter()
+
+function getItems(className) {
+    items.forEach(item => {
+        if (item.classList.contains(className)) {
+        item.style.display = 'flex'
+
+    } else {
+        item.style.display = 'none'
+    }
+    })
+}
+
+/* ----------------------фильтр по размеру--------------------------- */
+
+const listSize = document.querySelector('.filtres_size');
+
+function filterSize() {
+    listSize.addEventListener('click', event =>{
+        const targetIdSize = event.target.dataset.id
+        console.log(targetIdSize);
+
+        switch(targetIdSize) {
+            case 'малый':
+                getItemsSize(targetIdSize)
+                break
+
+            case 'средний':
+                getItemsSize(targetIdSize)
+                    break
+
+                case 'большой':
+                    getItemsSize(targetIdSize)
+                    break
+
+                    
+        }
+    } )
+}
+filterSize()
+
+function getItemsSize(className) {
+    items.forEach(item => {
+        if (item.classList.contains(className)) {
+        item.style.display = 'flex'
+
+    } else {
+        item.style.display = 'none'
+    }
+    })
+}
+
+/* ----------------------фильтр по типу--------------------------- */
+
+const listType = document.querySelector('.filtres_type');
+
+function filterType() {
+    listType.addEventListener('click', event =>{
+        const targetIdType = event.target.dataset.id
+        console.log(targetIdType);
+
+        switch(targetIdType) {
+            case 'шар':
+                getItemsType(targetIdType)
+                break
+
+            case 'колокольчик':
+                getItemsType(targetIdType)
+                    break
+
+                case 'шишка':
+                    getItemsType(targetIdType)
+                    break
+
+                    
+        }
+    } )
+}
+filterType()
+
+function getItemsType(className) {
+    items.forEach(item => {
+        if (item.classList.contains(className)) {
+        item.style.display = 'flex'
+
+    } else {
+        item.style.display = 'none'
+    }
+    })
+}

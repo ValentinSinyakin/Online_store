@@ -154,10 +154,15 @@ footer .copyright:before {
     gap: 15px;
 }
 .filtres_color_block{
-width: 20px;
-height: 20px;
-border: 1px solid silver;
+width: 25px;
+height: 25px;
+border: 1px solid rgb(71, 65, 7);
+border-radius: 100%;
 cursor: pointer;
+transition: 0.3s;
+}
+.filtres_color_block:hover{
+    border: 3px solid black;
 }
 
 .color_red {
@@ -169,9 +174,10 @@ background-color: red;
 .color_white{
     background-color: white;
 }
-.color_yellow{
-    background-color: yellow;
+.color_green{
+    background-color: green;
 }
+
 
 .filtres_size{
     display: flex;
@@ -180,7 +186,7 @@ background-color: red;
 }
 
 .filtres_size_block{
-    width: 70px;
+    width: 100px;
     height: 20px;
     border: 1px solid silver;
     cursor: pointer;
@@ -192,7 +198,7 @@ background-color: red;
     gap: 15px;
     }
     .filtres_type_block{
-        width: 70px;
+        width: 100px;
         height: 20px;
         border: 1px solid silver;
         cursor: pointer;
