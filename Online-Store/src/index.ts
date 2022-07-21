@@ -84,8 +84,6 @@ slider2.noUiSlider.on('update', function(values: number, handle: number){
 /* ----------------------------Активные кнопки для карточек--------------------------------- */
 
 
-alert("Доброго времени суток,прошу вас проверить работу в четверг,попал в неприятную жизненую ситуацию и не успел сделать работу.Заранее извиняюсь перед вами и благодарен за понимание");
-
 /* -------------------------------localStorage-------------------- */
 class LocalStorageUtil {
     constructor() {
@@ -146,7 +144,7 @@ class Products {
     render() {
         const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = '';
-        data.forEach(({num, name, count, year, shape, color, size, favorite}) => {
+        data.forEach(({num, name, count, year, shape, color, size, favorite,src}) => {
             let activClass = '';
             let activeText = '';
 
@@ -158,7 +156,7 @@ class Products {
             }
 
          htmlCatalog += `<li class = "products_card ${color} ${size} ${shape}">
-            
+         <img src="${src}" alt="img" >
             <span >${name}</span>
             <span>на складе:${count}</span>
             <span>${year}</span>
@@ -292,7 +290,7 @@ function getItemsSize(className) {
     })
 }
 
-/* ----------------------фильтр по типу--------------------------- */
+/* --------------------фильтр по типу------------------------- */
 
 const listType = document.querySelector('.filtres_type');
 

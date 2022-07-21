@@ -8,6 +8,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/shar-elochnyy-8-sm-d-324-2-akril-opal-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '2',
@@ -18,6 +19,7 @@ const data = [
       color: 'зелёный',
       size: 'большой',
       favorite: false,
+      src:'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-d-192-butylochnyy-matovyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '3',
@@ -28,6 +30,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/shar-elochnyy-8-sm-d-323-krasnyy-matovyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '4',
@@ -38,6 +41,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src: 'https://ae01.alicdn.com/kf/Hc1864bd8b80c487681e4dd63edd50a7dF.jpeg'
     },
     {
       num: '5',
@@ -48,6 +52,7 @@ const data = [
       color: 'красный',
       size: 'средний',
       favorite: true,
+      src:'https://ugolok.by/image/cache/catalog/elochnyy-shar-8-sm-d-335-krasnyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '6',
@@ -58,6 +63,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/shar-elochnyy-8-sm-d-323-krasnyy-matovyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '7',
@@ -68,6 +74,7 @@ const data = [
       color: 'белый',
       size: 'средний',
       favorite: true,
+      src: 'https://ugolok.by/image/cache/catalog/elochnyy-shar-8-sm-d-17-belyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '8',
@@ -78,6 +85,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src:'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-d-334-krasnyy-opal-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '9',
@@ -88,6 +96,7 @@ const data = [
       color: 'белый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/elochnaya-igrushka-kolokolchik-belyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '10',
@@ -98,6 +107,7 @@ const data = [
       color: 'белый',
       size: 'большой',
       favorite: false,
+      src:'https://ugolok.by/image/cache/catalog/Orbital/shar-yolochnyj-8-sm-d-258-belyj-matovyj-ruchnaya-rabota1-650x650.jpg'
     },
     {
       num: '11',
@@ -108,6 +118,7 @@ const data = [
       color: 'белый',
       size: 'малый',
       favorite: false,
+      src:'https://ugolok.by/image/cache/catalog/novogodnee-ukrashenie-shishka-sosnovaya-belaya-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '12',
@@ -118,6 +129,7 @@ const data = [
       color: 'белый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-d-384-belyy-opal-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '13',
@@ -128,6 +140,7 @@ const data = [
       color: 'синий',
       size: 'большой',
       favorite: true,
+      src: 'https://ugolok.by/image/cache/catalog/Orbital/shar-yolochnyj-8-sm-d-258-sinij2-650x650.jpg'
     },
     {
       num: '14',
@@ -138,6 +151,7 @@ const data = [
       color: 'синий',
       size: 'большой',
       favorite: true,
+      src: 'https://ugolok.by/image/cache/catalog/shar-elochnyy-8-sm-d-258-siniy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '15',
@@ -148,6 +162,7 @@ const data = [
       color: 'синий',
       size: 'средний',
       favorite: false,
+      src: 'https://4eli.ru/upload/iblock/a30/a30a490ee1ae83d8515948ca91092c47.jpg'
     },
     {
       num: '16',
@@ -158,6 +173,7 @@ const data = [
       color: 'синий',
       size: 'средний',
       favorite: true,
+      src: 'https://cdn1.ozone.ru/s3/multimedia-r/c1200/6163047087.jpg'
     },
     {
       num: '17',
@@ -168,6 +184,7 @@ const data = [
       color: 'красный',
       size: 'средний',
       favorite: false,
+      src: 'https://avatars.mds.yandex.net/get-mpic/5252277/img_id3507929191436785051.jpeg/orig'
     },
     {
       num: '18',
@@ -178,6 +195,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-d-250-temno-zolotoy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '19',
@@ -188,6 +206,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-gliter-zheltyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '20',
@@ -198,6 +217,7 @@ const data = [
       color: 'красный',
       size: 'средний',
       favorite: true,
+      src: 'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-d-215-krasnyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '21',
@@ -208,6 +228,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: true,
+      src: 'https://ugolok.by/image/cache/catalog/Orbital/shar-yolochnyj-8-sm-d-222-krasnyj2-650x650.jpg'
     },
     {
       num: '22',
@@ -218,6 +239,7 @@ const data = [
       color: 'желтый',
       size: 'малый',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/novogodnee-ukrashenie-shishka-sosnovaya-med-s-belym-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '23',
@@ -228,6 +250,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/Orbital/yolochnaya-igrushka-kolokolchik-krasnyj-650x650.jpg'
     },
     {
       num: '24',
@@ -238,6 +261,7 @@ const data = [
       color: 'белый',
       size: 'большой',
       favorite: false,
+      src: 'https://cdn1.ozone.ru/s3/multimedia-4/c1200/6068202796.jpg'
     },
     {
       num: '25',
@@ -248,6 +272,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-d-294-2-rozovyy-opal-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '26',
@@ -258,6 +283,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/novogodniy-shar-8-sm-gliter-zheltyy-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '27',
@@ -268,6 +294,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/Orbital/shar-yolochnyj-8-sm-d-222-krasnyj2-650x650.jpg'
     },
     {
       num: '28',
@@ -278,6 +305,7 @@ const data = [
       color: 'красный',
       size: 'большой',
       favorite: false,
+      src: 'https://ugolok.by/image/cache/catalog/Orbital/novogodnij-shar-8-sm-sh-319-krasnyj-matovyj-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '29',
@@ -288,6 +316,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: true,
+      src: 'https://ugolok.by/image/cache/catalog/shar-elochnyy-8-sm-d-324-2-akril-opal-ruchnaya-rabota-650x650.jpg'
     },
     {
       num: '30',
@@ -298,6 +327,7 @@ const data = [
       color: 'желтый',
       size: 'большой',
       favorite: true,
+      src: 'https://coberu.ru/files/coins/737602/detail_elochnaya_igrushka_shar_steklo_simvol_goda_krysa_mysh_75sm_art3211_id1964.jpg'
     },
 
   ];
