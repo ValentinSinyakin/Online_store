@@ -189,7 +189,7 @@ class Header {
     render(num) {
         const html = `
         <div class = "header_container">
-        <div>Магазин Игрушек</div>
+        <div class = "header_title">Магазин Игрушек</div>
         <div class="search-box">
 		<input type="text" class="search-txt" placeholder="Поиск">
 		<a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true">💬</i></a>
