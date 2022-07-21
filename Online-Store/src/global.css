@@ -143,7 +143,7 @@ footer .copyright:before {
 
 .products-element__btn_active {
 	border: 3px solid transparent;
-	background-image: rgb(212, 148, 148);
+	background-color: rgb(212, 148, 148);
 }
 
 /* --------------------------filtres---------- */
@@ -198,3 +198,73 @@ background-color: red;
         cursor: pointer;
         background-color: #b1d9da;
     }
+
+  /*   ----------header------------- */
+  /* .Container_header_nav{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    
+  } */
+
+  .header_container {
+    display: flex;
+    height: 50px;
+    padding: 15px;
+    gap: 100px;
+    justify-content: space-between;
+
+   
+  }
+
+  .header_counter {
+    display: flex;
+        margin-left: auto ;
+        font-weight: bold;
+        cursor: pointer;
+  }
+
+ /*  ------------------поиск----------------------- */
+
+
+.search-box {
+	display: flex;
+	background-color: #2f3640;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+
+}
+
+.search-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f0f0f0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #2f3640;
+	text-decoration: none;
+}
+
+.search-txt {
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+	transition: .4s;
+	line-height: 40px;
+	width: 0;
+}
+
+.search-box:hover .search-txt {
+	width: 240px;
+	padding: 0 6px;
+}
+
+.search-box:hover .search-btn {
+	background-color: #2b2b2b;
+}

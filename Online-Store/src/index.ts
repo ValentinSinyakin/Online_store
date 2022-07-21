@@ -1,6 +1,7 @@
 import * as noUiSlider from 'nouislider';
 import './global.css';
 import data from './data'
+import { setTheme } from 'colors';
 
 
 
@@ -78,33 +79,83 @@ slider2.noUiSlider.on('update', function(values: number, handle: number){
 }
 
 
+
+
+/* ----------------------------Активные кнопки для карточек--------------------------------- */
+
+
+alert("Доброго времени суток,прошу вас проверить работу в четверг,попал в неприятную жизненую ситуацию и не успел сделать работу.Заранее извиняюсь перед вами и благодарен за понимание");
+
+/* -------------------------------localStorage-------------------- */
+class LocalStorageUtil {
+    constructor() {
+        this.KeyName = 'products';
+    }
+
+    getProducts() {
+        const productsLocalStorage = localStorage.getItem(this.KeyName);
+        if (productsLocalStorage !== null) {
+            return JSON.parse(productsLocalStorage);
+        }
+        return [];
+    }
+
+    putProducts(num) {
+        let products = this.getProducts();
+        let pushProduct = false;
+        const index = products.indexOf(num);
+
+        if(index === -1) {
+            products.push(num);  
+            pushProduct = true;
+        } else {
+            products.splice(index, 1);
+        }
+        
+        localStorage.setItem(this.KeyName, JSON.stringify(products));
+        return {pushProduct, products}
+
+    }
+}
+const localStorageUtil = new LocalStorageUtil();
+
 /* ----------------------карточки---------------- */
 
 const ROOT_PRODUCTS=document.getElementById('card');
+const ROOT_HEADER=document.getElementById('header');
 class Products {
- /*  constructor() {
+   constructor() {
     this.classNameActive = 'products-element__btn_active';
     this.labelAdd = 'Добавить в корзину';
-    this.labelRemove = 'Удалить из корзины';
-}
-
-handlerSetLocatStorage(element, id) {
-    const { pushProduct, products } = localStorageUtil.putProducts(id);
+    this.labelRemove = 'Удалить из карзины';
+   }
+   
+  handleSetlocationStorage(element, num) {
+    const {pushProduct,products} = localStorageUtil.putProducts(num);
 
     if (pushProduct) {
         element.classList.add(this.classNameActive);
-        element.innerText = this.labelRemove;
+        element.innerHTML = this.labelRemove;
     } else {
         element.classList.remove(this.classNameActive);
-        element.innerText = this.labelAdd;
+        element.innerHTML = this.labelAdd;
     }
-
     headerPage.render(products.length);
-} */
+  }
 
     render() {
+        const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = '';
         data.forEach(({num, name, count, year, shape, color, size, favorite}) => {
+            let activClass = '';
+            let activeText = '';
+
+            if (productsStore.indexOf(num) === -1) {
+                activeText = this.labelAdd;
+            } else {
+                activClass = ' ' + this.classNameActive;
+                activeText = this.labelRemove;
+            }
 
          htmlCatalog += `<li class = "products_card">
             <span class = "">${num}</span>
@@ -115,7 +166,9 @@ handlerSetLocatStorage(element, id) {
             <span>${color}</span>
             <span>${size}</span>
             <span>${favorite}</span>
-            <button class = "products-element__btn">Добавить в корзину</button>
+            <button class = "products-element__btn${activClass}" onclick="productsPage.handleSetlocationStorage(this, '${num}');">
+            ${activeText}
+            </button>
                         </li> `;
 
 
@@ -130,9 +183,28 @@ handlerSetLocatStorage(element, id) {
     }
 }
 const productsPage = new Products();
+window.productsPage = productsPage;
 productsPage.render();
 
-/* ----------------------------Активные кнопки для карточек--------------------------------- */
-
-
-alert("Доброго времени суток,прошу вас проверить работу в четверг,попал в неприятную жизненую ситуацию и не успел сделать работу.Заранее извиняюсь перед вами и благодарен за понимание");
+/* ----------------------------------------corzina-------------------------- */
+class Header {
+    render(num) {
+        const html = `
+        <div class = "header_container">
+        <div>Магазин Игрушек</div>
+        <div class="search-box">
+		<input type="text" class="search-txt" placeholder="Поиск">
+		<a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true">💬</i></a>
+	</div>
+            <div class = "header_counter">
+             Корзина💼: ${num} шт
+            </div>
+        </div>
+        `;
+        ROOT_HEADER.innerHTML = html;
+    }
+}
+const headerPage = new Header();
+const productsStore = localStorageUtil.getProducts();
+window.headerPage = headerPage;
+headerPage.render(productsStore.length);
