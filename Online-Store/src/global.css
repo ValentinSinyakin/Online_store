@@ -1,10 +1,11 @@
 @import '../node_modules/nouislider/dist/nouislider.min.css';
 
+
 body {
     color: #fff;
     background: #a99bad;
     font-family: sans-serif;
-    max-width: 1280px;
+    max-width: 768px;
     margin: 0 auto;
 }
 
@@ -68,7 +69,13 @@ footer .copyright:before {
     gap: 15px;
     padding: 15px;
 }
+/* ------------------------header------------- */
+.header_title {
+    font-size: 36px;
+}
+.conteiner {
 
+}
 /* -----------------slider------------ */
 .noUi-target{
     background-color: rgb(126, 0, 0);
@@ -104,7 +111,7 @@ footer .copyright:before {
 }
 
 .products_container {
-    max-width: 1024px;
+    max-width: 768px;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -182,7 +189,7 @@ background-color: red;
 .filtres_size{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .filtres_size_block{
@@ -191,11 +198,16 @@ background-color: red;
     border: 1px solid silver;
     cursor: pointer;
     background-color: #d1b1da;
+    transition: 0.3s;
+    }
+    .filtres_size_block:hover{
+        border: 3px solid black;
+        background-color: #d48be9;
     }
 .filtres_type{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     }
     .filtres_type_block{
         width: 100px;
@@ -203,8 +215,12 @@ background-color: red;
         border: 1px solid silver;
         cursor: pointer;
         background-color: #b1d9da;
+        transition: 0.3s;
     }
-
+    .filtres_type_block:hover{
+        border: 3px solid black;
+        background-color: #1e8688;
+    }
   /*   ----------header------------- */
   /* .Container_header_nav{
     display: flex;
