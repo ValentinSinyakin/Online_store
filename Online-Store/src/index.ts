@@ -136,3 +136,38 @@ productsPage.render();
 
 
 alert("Доброго времени суток,прошу вас проверить работу в четверг,попал в неприятную жизненую ситуацию и не успел сделать работу.Заранее извиняюсь перед вами и благодарен за понимание");
+
+/* -------------------------------localStorage-------------------- */
+class LocalStorageUtil {
+    constructor() {
+        this.KeyName = 'products';
+    }
+
+    getProducts() {
+        const productsLocalStorage = localStorage.getItem(this.KeyName);
+        if (productsLocalStorage !== null) {
+            return JSON.parse(productsLocalStorage);
+        }
+        return [];
+    }
+
+    putProducts(num) {
+        let products = this.getProducts();
+        let pushProduct = false;
+        const index = products.indexOf(num);
+
+        if(index === -1) {
+            products.push(num);  
+            pushProduct = true;
+        } else {
+            products.splice(index, 1);
+        }
+        products.push(num);
+        localStorage.setItem(this.KeyName, JSON.stringify(products));
+        return {pushProduct,products}
+
+    }
+}
+const localStorageUtil = new LocalStorageUtil();
+localStorageUtil.putProducts('1');
+localStorageUtil.putProducts('2');
