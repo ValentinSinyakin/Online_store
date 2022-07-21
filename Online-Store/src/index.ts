@@ -194,7 +194,7 @@ class Header {
         <div>Магазин Игрушек</div>
         <div class="search-box">
 		<input type="text" class="search-txt" placeholder="Поиск">
-		<a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
+		<a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true">💬</i></a>
 	</div>
             <div class = "header_counter">
              Корзина💼: ${num} шт
