@@ -155,7 +155,7 @@ class Products {
                 activeText = this.labelRemove;
             }
 
-         htmlCatalog += `<li class = "products_card ${color} ${size} ${shape}">
+         htmlCatalog += `<li class = "products_card ${color} ${size} ${shape} ${favorite}  ">
          <img src="${src}" alt="img" >
             <span >${name}</span>
             <span>на складе:${count}</span>
@@ -343,6 +343,44 @@ function filterType() {
 filterType()
 
 function getItemsType(className) {
+    items.forEach(item => {
+        if (item.classList.contains(className)) {
+        item.style.display = 'flex'
+
+    } else {
+        item.style.display = 'none'
+    }
+    })
+}
+
+/* ---------------лучшее---------------------- */
+const listFavorite = document.querySelector('.filtres_faforites');
+const listItemsFavorite =document.querySelectorAll('.filtres_faforites_block');
+
+function filterFavorite() {
+    listFavorite.addEventListener('click', event =>{
+        const targetIdFavorite = event.target.dataset.id
+        const target = event.target
+        console.log(targetIdFavorite);
+
+        listItemsFavorite.forEach(listItemFavorite =>listItemFavorite.classList.remove('active'))
+        target.classList.add('active');
+
+        switch(targetIdFavorite) {
+
+                case 'true':
+                    getItemsFavorite(targetIdFavorite)
+                    break
+                    case 'all_faforites':
+                        getItemsFavorite('products_card')
+                        break
+                    
+        }
+    } )
+}
+filterFavorite()
+
+function getItemsFavorite(className) {
     items.forEach(item => {
         if (item.classList.contains(className)) {
         item.style.display = 'flex'
