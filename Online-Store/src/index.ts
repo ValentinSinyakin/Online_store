@@ -212,11 +212,16 @@ headerPage.render(productsStore.length);
 
 const list = document.querySelector('.filtres_color');
 const items = document.querySelectorAll('.products_card');
+const listItems =document.querySelectorAll('.filtres_color_block');
 
 function filter() {
     list.addEventListener('click', event =>{
         const targetId = event.target.dataset.id
+        const target = event.target
         console.log(targetId);
+
+        listItems.forEach(listItem =>listItem.classList.remove('active'))
+        target.classList.add('active');
 
         switch(targetId) {
             case 'красный':
@@ -234,6 +239,11 @@ function filter() {
                     case 'зелёный':
                         getItems(targetId)
                     break
+
+                    case 'all_color':
+                        getItems('products_card')
+                    break
+                    
                     
         }
     } )
@@ -254,11 +264,15 @@ function getItems(className) {
 /* ----------------------фильтр по размеру--------------------------- */
 
 const listSize = document.querySelector('.filtres_size');
-
+const listItemsSize = document.querySelectorAll('.filtres_size_block');
 function filterSize() {
     listSize.addEventListener('click', event =>{
         const targetIdSize = event.target.dataset.id
+        const target = event.target
         console.log(targetIdSize);
+
+        listItemsSize.forEach(listItemSize => listItemSize.classList.remove('active'))
+        target.classList.add('active');
 
         switch(targetIdSize) {
             case 'малый':
@@ -272,6 +286,9 @@ function filterSize() {
                 case 'большой':
                     getItemsSize(targetIdSize)
                     break
+                    case 'all_size':
+                        getItemsSize('products_card')
+                        break
 
                     
         }
@@ -293,11 +310,16 @@ function getItemsSize(className) {
 /* --------------------фильтр по типу------------------------- */
 
 const listType = document.querySelector('.filtres_type');
+const listItemsType =document.querySelectorAll('.filtres_type_block');
 
 function filterType() {
     listType.addEventListener('click', event =>{
         const targetIdType = event.target.dataset.id
+        const target = event.target
         console.log(targetIdType);
+
+        listItemsType.forEach(listItemType =>listItemType.classList.remove('active'))
+        target.classList.add('active');
 
         switch(targetIdType) {
             case 'шар':
@@ -311,7 +333,9 @@ function filterType() {
                 case 'шишка':
                     getItemsType(targetIdType)
                     break
-
+                    case 'all_type':
+                        getItemsType('products_card')
+                        break
                     
         }
     } )

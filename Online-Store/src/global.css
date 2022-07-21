@@ -184,6 +184,12 @@ background-color: red;
 .color_green{
     background-color: green;
 }
+.all_collor {
+    width: 100px;
+    height: 40px;
+    border-radius: 0%;
+    background-color: rgb(6, 168, 168);
+}
 
 
 .filtres_size{
@@ -194,7 +200,7 @@ background-color: red;
 
 .filtres_size_block{
     width: 100px;
-    height: 20px;
+    height: 40px;
     border: 1px solid silver;
     cursor: pointer;
     background-color: #d1b1da;
@@ -211,7 +217,7 @@ background-color: red;
     }
     .filtres_type_block{
         width: 100px;
-        height: 20px;
+        height: 40px;
         border: 1px solid silver;
         cursor: pointer;
         background-color: #b1d9da;
